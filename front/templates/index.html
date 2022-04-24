@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>STOCKEPIPHANY</title>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+
+
+  <body>
+      <div class="outer">
+    <video src="{% static '/images/video.mp4' %}" autoplay loop muted></video>
+    <div class="wrapper">
+      <section class="showcase">
+      
+      
+     <h1 class="title">
+       
+      STOCKEPIPHANY
+      
+     </h1>
+         
+         
+    </section>
+      
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+      <div class="list">
+      <ul>
+        <li>Stock Name</li>
+        <li>Stock Price</li>
+        <li>Stock Price Change</li>
+        <li>Change Percentage </li>
+        <li>Market Status</li>
+        <li>Opening Time </li>
+     </div>
+    </div>
+    </div>
+</div>
+     <script src="{% static 'js/suggestions.js' %}"></script> 
+     <script src="{% static 'js/script.js' %}"></script> 
+</body>
+</html>

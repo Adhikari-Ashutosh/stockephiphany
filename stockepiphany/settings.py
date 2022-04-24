@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8xt52=9puzwy3-3ld35sv*5bzpuu60vrg7$u0!buspd!otxf&8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stockepiphany.herokuapp.com']
+ALLOWED_HOSTS = ['stockepiphany.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'front'
 ]
 
 MIDDLEWARE = [
