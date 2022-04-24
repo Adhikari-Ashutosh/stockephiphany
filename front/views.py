@@ -3,22 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def getData(stonks):
-     url=f'https://finance.yahoo.com/quote/{stonks}'#yahoo finance url
-     r = requests.get(url)
-     soup = BeautifulSoup(r.text,'html.parser')
 
-     #the mainn info div is of class 'D(ib) Mend(20px)'
-     #the price,change and percentage are under its fin streamer
-     stock = {
-     'stock_name' : soup.find('div', {'class': 'Mt(15px) D(f) Jc(sb)'}).find('h1').text,#hehe stonks ;)
-     'price' : soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('fin-streamer')[0].text, 
-     'change' : soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('fin-streamer')[1].text,
-     'change_percentage' : soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('fin-streamer')[2].text,
-     'market_status' : soup.find('div',{'class': 'C($tertiaryColor) D(b) Fz(12px) Fw(n) Mstart(0)--mobpsm Mt(6px)--mobpsm Whs(n)'}).find('span').text,
-     'opening_time' : soup.find('div',{'class' : 'D(ib) Fl(end) Pb(6px) Fz(xs) Fw(b) fin-update-style'}).find('span').text
-     }
-     return stock
 def index(request):
     return render(request,'index.html')
 def work(request):
