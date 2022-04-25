@@ -28,4 +28,13 @@ def index(request):
 def work(request):
     stonk=request.GET["Stonk"]
     stonkdata=getData(stonk)
+    insight={
+        'stonkin':"Neutral"
+    }
+    if stonk['change_percentage']<0:
+        insight['stonkin']="Invest O.O"
+    else:
+        insight['stonkin']="Sell O.O"
+    stonkdata.update(insight)
+
     return render(request,'index.html',stonkdata)
