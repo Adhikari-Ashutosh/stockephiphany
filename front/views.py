@@ -31,7 +31,7 @@ def work(request):
     insight={
         'stonkin':"Neutral"
     }
-    if stonkdata['change_percentage']<0:
+    if int(stonkdata['change_percentage'])<0:
         insight['stonkin']="Invest O.O"
     else:
         insight['stonkin']="Sell O.O"
