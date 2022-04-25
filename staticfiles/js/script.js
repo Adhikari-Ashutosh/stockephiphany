@@ -11,11 +11,11 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-        if(!(${userData}=="")){
+        
         webLink = `http://heroku.stockephiphany/work?Stonk=${userData}`;
         linkTag.setAttribute("href", webLink);
         linkTag.click();
-      }
+      
     }
         emptyArray = suggestions.filter((data)=>{
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
