@@ -28,23 +28,25 @@
          
          
     </section>
-      
+      <form action="work">
       <div class="search-input">
         <a href="" target="_blank" hidden></a>
-        <input type="text" placeholder="Type to search..">
+        <input type="text" placeholder="Type to search.." name="Stonk">
         <div class="autocom-box">
-          <!-- here list are inserted from javascript -->
+          
         </div>
-        <div class="icon"><i class="fas fa-search"></i></div>
+        <input type="submit" class="icon">
       </div>
+    </form>
       <div class="list">
       <ul>
-        <li>Stock Name</li>
-        <li>Stock Price</li>
-        <li>Stock Price Change</li>
-        <li>Change Percentage </li>
-        <li>Market Status</li>
-        <li>Opening Time </li>
+      
+        <li>Stock Name: {{stock_name}}</li>
+        <li>Stock Price: {{price}}</li>
+        <li>Stock Price Change: {{change}}</li>
+        <li>Change Percentage: {{change_percentage}} </li>
+        <li>Market Status: {{market_status}}</li>
+        <li>Opening Time: {{opening_time}} </li>
      </div>
     </div>
     </div>

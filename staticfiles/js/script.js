@@ -11,10 +11,10 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-            webLink = `https://www.google.com/search?q=${userData}`;
-            linkTag.setAttribute("href", webLink);
-            linkTag.click();
-        }
+        webLink = `http://heroku.stockephiphany/work?Stonk=${userData}`;
+        linkTag.setAttribute("href", webLink);
+        linkTag.click();
+      }
         emptyArray = suggestions.filter((data)=>{
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
             return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
@@ -38,7 +38,7 @@ function select(element){
     let selectData = element.textContent;
     inputBox.value = selectData;
     icon.onclick = ()=>{
-        webLink = `https://www.google.com/search?q=${selectData}`;
+        webLink = `http://heroku.stockepiphany/work?Stonk${selectData}`;
         linkTag.setAttribute("href", webLink);
         linkTag.click();
     }
