@@ -46,5 +46,4 @@ let suggestions=["AMD",
 "C",
 "FCEL",
 "PCG",
-"JMIA",
-"ANFIF"]
+"JMIA"]
